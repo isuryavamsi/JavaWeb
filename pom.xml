@@ -21,10 +21,24 @@
     <version>2.5</version>
 </dependency>
 </dependencies>
-<distributionManagement>
-  <repository>
-    <id>releases</id>
-        <url>http://52.204.135.48:8081/nexus/content/repositories/releases</url>
-  </repository>
-</distributionManagement>
+<build>
+     <finalName>JavaWeb</finalName>
+     <plugins>
+        <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.0</version>
+                <configuration>
+                        <url>http://3.216.123.238:8080/manager/text</url>
+                        <server>TomcatServer</server>
+                        <path>/JavaWeb</path>
+                        <username>tomcat</username>
+                        <password>tomcat</password>
+                </configuration>
+        </plugin>
+     </plugins>
+
+</build>
+
 </project>
+
